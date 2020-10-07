@@ -1,0 +1,17 @@
+<!-- home.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-6 col-auto">
+  <div class="card">
+    <div class="card-header">
+      NEOs
+    </div>
+    <ul class="list-group list-group-flush">
+      {% for neo in neos %}
+      <li class="list-group-item">{{ neo.id }} - {{ neo.name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock content %}
