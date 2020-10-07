@@ -18,11 +18,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
-<<<<<<< HEAD
       env:
         SECRET_KEY: ${{secrets.SECRET_KEY}}
-=======
->>>>>>> a8db0499228152c6b73b90b086d31df0a14d14a9
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
