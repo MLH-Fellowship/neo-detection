@@ -1,4 +1,4 @@
 from django.apps import AppConfig
 
-class DisplayConfig(AppConfig):
+class DetectorConfig(AppConfig):
     name = 'detector'
