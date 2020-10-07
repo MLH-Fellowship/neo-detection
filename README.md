@@ -24,7 +24,7 @@ python manage.py createsuperuser --username admin --email admin@example.com
 
 ## Environment Variables
 
-Rename `.env.example` to `.env` and provide the following environment variables:
+Create a new `.env` file in root directory and use `.env.example` as a reference to provide the following environment variables:
 
 ```sh
 DJANGO_SECRET_KEY=
