@@ -10,12 +10,8 @@ cd neo-detection
 python3 -m venv env
 source env/bin/activate
 
-# Install Django and Django REST Framework into virtual env
-pip install django
-pip install djangorestframework
-
-# Install dotenv to use environment variables
-pip install python-dotenv
+# Install all required packages (Django, Django REST Framework, dotenv, etc.) into virtual env
+pip install -r requirements.txt
 
 # Configure environment variables (instructions below)
 
