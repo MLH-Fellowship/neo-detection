@@ -21,10 +21,10 @@ jobs:
 
     steps:
       # Checkout to commit that triggered the workflow
-    - name: Checkout current commit
+    - name: Checkout Latest Commit
       uses: actions/checkout@v2
       # Caching dependency to make build faster
-    - name: Cache dependency
+    - name: Cache Dependency
       uses: actions/cache@v2
       with:
         path: ~/.cache/pip
@@ -35,13 +35,13 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Check Python version
+    - name: Check Python Version
       run: python --version
     - name: Install Requirements
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run migrations
+    - name: Run Migrations
       run: python manage.py migrate
     - name: Run Tests
       run: python manage.py test
