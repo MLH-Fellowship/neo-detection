@@ -19,7 +19,10 @@ pip install -r requirements.txt
 python manage.py migrate
 
 # Create an admin superuser with your desired username, email and password
-python manage.py createsuperuser --username admin --email admin@example.com 
+python manage.py createsuperuser --username admin --email admin@example.com
+
+# Run the server (default: 127.0.0.1:8000)
+python manage.py runserver
 ```
 
 ## Environment Variables
