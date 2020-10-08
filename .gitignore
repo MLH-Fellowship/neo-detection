@@ -251,3 +251,6 @@ dist
 
 # VSCode
 .vscode/
+
+# Mac stuff
+.DS_Store
