@@ -5,11 +5,12 @@
 <div class="col-md-6 col-auto">
   <div class="card">
     <div class="card-header">
-      NEOs
+      NEOs ({{ is_cached|yesno:"cached,not cached" }})
     </div>
     <ul class="list-group list-group-flush">
       {% for neo in neos %}
-      <li class="list-group-item">ID: {{ neo.id }}<br />
+      <li class="list-group-item">
+        ID: {{ neo.id }}<br/>
         Name: {{ neo.name }}</li>
       {% endfor %}
     </ul>
