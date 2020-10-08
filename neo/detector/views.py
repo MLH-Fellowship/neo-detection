@@ -19,4 +19,6 @@ def home(request):
 
     # return render(request, "detector/home.html", { "neos": neodata['near_earth_objects'], 'is_cached': is_cached })
 
-    return JsonResponse({"neos": data['near_earth_objects']}, status=200)
+    # Using JsonResponse object (an HTTPResponse subclass) to create a JSON-encoded response. Its default Content-Type header is set to application/json.
+    # https://docs.djangoproject.com/en/3.1/ref/request-response/#jsonresponse-objects
+    return JsonResponse({"neos": neodata['near_earth_objects'], 'is_cached': is_cached})

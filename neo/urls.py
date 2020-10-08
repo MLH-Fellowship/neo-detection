@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # frontend will use this path to collect data
     path("api/", include("neo.detector.urls")),
 ]

@@ -34,6 +34,11 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# CORS
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#:~:text=Cross%2DOrigin%20Resource%20Sharing%20(CORS)%20is%20a%20mechanism%20that,resources%20from%20a%20different%20origin.&text=The%20CORS%20mechanism%20supports%20secure,transfers%20between%20browsers%20and%20servers.
+
+# Added corsheaders to list of installed apps and its middleware to prevent CORS errors from frontend from one origin requesting resources from a backend served from a different origin (domain, protocol, or port)
+# https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react#setting-up-the-backend
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -127,7 +132,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# we whitelist localhost:3000 because that's where frontend will be served
+# Whitelist localhost:3000 because that's where the frontend will be served
 CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000'
 ]
