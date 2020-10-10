@@ -22,4 +22,4 @@ def browse(request):
 
     # Using JsonResponse object (an HTTPResponse subclass) to create a JSON-encoded response. Its default Content-Type header is set to application/json.
     # https://docs.djangoproject.com/en/3.1/ref/request-response/#jsonresponse-objects
-    return JsonResponse({ "neodata": neodata })
+    return JsonResponse({ "neos": neodata['near_earth_objects'] })
