@@ -1,1 +1,1 @@
-web: gunicorn neo:detector
+web: gunicorn neo.wsgi:application
