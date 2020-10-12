@@ -140,6 +140,6 @@ STATIC_ROOT = '/'
 CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000',
      'https://neo-client.herokuapp.com',
-     'https://mlh-fellowship.github.io/neo-client',
+     'https://mlh-fellowship.github.io',
      'https://neo-client.netlify.app'
 ]
