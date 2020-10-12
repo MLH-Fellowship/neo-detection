@@ -10,8 +10,8 @@ def browse(request):
 
     page = request.GET.get('page', 0)
 
-    # Refresh cache every 30 minutes once it expires
-    request.session.set_expiry(60 * 30)
+    # Refresh cache every 60 minutes once it expires
+    request.session.set_expiry(60 * 60)
 
     if not page in request.session['neodata']:
         params = dict(api_key=os.getenv('NASA_API_KEY'), size=20, page=page)
@@ -22,7 +22,7 @@ def browse(request):
 
     # Using JsonResponse object (an HTTPResponse subclass) to create a JSON-encoded response. Its default Content-Type header is set to application/json.
     # https://docs.djangoproject.com/en/3.1/ref/request-response/#jsonresponse-objects
-    return JsonResponse({ "neos": neodata['near_earth_objects'] })
+    return JsonResponse({ "neos": neodata })
 
 def news(request):
     response = requests.get('https://spaceflightnewsapi.net/api/v1/articles?limit=3')
