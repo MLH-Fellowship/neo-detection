@@ -19,6 +19,14 @@ def browse(request):
         request.session['neodata'][page] = response.json()
 
     neodata = request.session['neodata'][page]
+    
+    if 'links' in neodata:
+        del neodata['links']
+    
+    if 'near_earth_objects' in neodata:
+        for obj in neodata['near_earth_objects']:
+            if 'links' in obj:
+                del obj['links']
 
     # Using JsonResponse object (an HTTPResponse subclass) to create a JSON-encoded response. Its default Content-Type header is set to application/json.
     # https://docs.djangoproject.com/en/3.1/ref/request-response/#jsonresponse-objects
