@@ -139,5 +139,7 @@ STATIC_ROOT = '/'
 # Whitelist localhost:3000 because that's where the frontend will be served
 CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000',
-     'https://neo-client.herokuapp.com'
+     'https://neo-client.herokuapp.com',
+     'https://mlh-fellowship.github.io/neo-client/',
+     'https://neo-client.netlify.app/'
 ]
