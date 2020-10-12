@@ -29,7 +29,9 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'https://neo-detection.herokuapp.com/',
+]
 
 
 # Application definition
@@ -135,5 +137,6 @@ STATIC_ROOT = '/'
 
 # Whitelist localhost:3000 because that's where the frontend will be served
 CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000'
+     'http://localhost:3000',
+     'https://neo-client.herokuapp.com/'
 ]
