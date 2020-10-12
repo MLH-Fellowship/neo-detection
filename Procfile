@@ -1,1 +1,1 @@
-web: gunicorn neo.wsgi:application
+web: python manage.py runserver
