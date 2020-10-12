@@ -8,7 +8,7 @@ def browse(request):
     # if not 'neodata' in request.session:
         # request.session['neodata'] = {}
 
-    # page = request.GET.get('page', 0)
+    page = request.GET.get('page', 0)
 
     # Refresh cache every 60 minutes once it expires
     # request.session.set_expiry(60 * 60)
@@ -20,13 +20,13 @@ def browse(request):
 
     # neodata = request.session['neodata'][page]
     
-    # if 'links' in neodata:
-    #     del neodata['links']
+    if 'links' in neodata:
+        del neodata['links']
     
-    # if 'near_earth_objects' in neodata:
-    #     for obj in neodata['near_earth_objects']:
-    #         if 'links' in obj:
-    #             del obj['links']
+    if 'near_earth_objects' in neodata:
+        for obj in neodata['near_earth_objects']:
+            if 'links' in obj:
+                del obj['links']
 
     # Using JsonResponse object (an HTTPResponse subclass) to create a JSON-encoded response. Its default Content-Type header is set to application/json.
     # https://docs.djangoproject.com/en/3.1/ref/request-response/#jsonresponse-objects
