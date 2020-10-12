@@ -19,7 +19,6 @@ def browse(request):
         request.session['neodata'][page] = response.json()
 
     neodata = request.session['neodata'][page]
-    # neodata = response.json()
     
     if 'links' in neodata:
         del neodata['links']
