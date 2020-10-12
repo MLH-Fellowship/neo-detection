@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'neo.detector.apps.DetectorConfig',
 ]
 
-SESSION_ENGINE='django.contrib.sessions.backends.cached_db'
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
