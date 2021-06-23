@@ -33,6 +33,6 @@ def browse(request):
     return JsonResponse({ "neos": neodata })
 
 def news(request):
-    response = requests.get('https://spaceflightnewsapi.net/api/v1/articles?limit=3')
+    response = requests.get('https://api.spaceflightnewsapi.net/v3/articles?_limit=3')
     data = response.json()
-    return JsonResponse({"news": data['docs']})
+    return JsonResponse({"news": data})
